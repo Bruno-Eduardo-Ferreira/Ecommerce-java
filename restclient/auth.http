@@ -1,0 +1,10 @@
+@URL_BASE = http://localhost:8080
+
+### Autenticção - Gerar o token
+POST {{URL_BASE}}/auth
+Content-Type: application/json
+
+{
+    "username": "james2@gmail.com",
+    "password": "1234"
+}

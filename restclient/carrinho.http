@@ -1,0 +1,39 @@
+@URL_BASE = http://localhost:8080
+
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjhjOTllNTc0LTFhZjQtNDUzMi1hOTQ4LTE4Y2E0NTJhNmFlNSIsInVzZXJuYW1lIjoiamFtZXMyQGdtYWlsLmNvbSIsImlhdCI6MTY4NTY3MTkxNSwiZXhwIjoxNjg1Njc1NTE1LCJpc3MiOiJVVEZQUiJ9.a1Obk3sX6f-bsXhmE9_nJtKly5gqrfZDlBarHTymeec
+
+### Criar Carrinho
+POST {{URL_BASE}}/carrinho
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+	"productsIds": [
+		"79b68efd-fafc-4adb-a32e-d86c2b138f95",
+		"43c5b1e2-a15f-4098-a424-ba074270d6b8"
+	],
+	"pessoaId": "f9e58a40-af4f-49ce-8dcf-18ce44a2c5e4"
+}
+
+### Obter um carrinho pelo ID
+GET {{URL_BASE}}/carrinho/60599a6a-2b33-4189-9fce-35841b557105
+Authorization: {{token}}
+
+### Obter todos carrinhos
+GET {{URL_BASE}}/carrinho
+Authorization: {{token}}
+
+### Atualizar Carrinho
+PUT {{URL_BASE}}/carrinho/60599a6a-2b33-4189-9fce-35841b557105
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+	"productsIds": [
+		"db89d4c7-8ae9-4d5f-85e9-b78d5718f92a",
+        "095ca27f-d9c3-4fe4-81a0-353d5774a9fc",
+        "55feb01b-a57d-457b-b581-18299b49f1b7",
+        "84945315-e216-48f1-b504-e9238ac13749"
+	],
+	"pessoaId": "f9e58a40-af4f-49ce-8dcf-18ce44a2c5e4"
+}

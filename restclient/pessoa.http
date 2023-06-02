@@ -1,0 +1,22 @@
+@URL_BASE = http://localhost:8080
+
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjhjOTllNTc0LTFhZjQtNDUzMi1hOTQ4LTE4Y2E0NTJhNmFlNSIsInVzZXJuYW1lIjoiamFtZXMyQGdtYWlsLmNvbSIsImlhdCI6MTY4NTY3MTkxNSwiZXhwIjoxNjg1Njc1NTE1LCJpc3MiOiJVVEZQUiJ9.a1Obk3sX6f-bsXhmE9_nJtKly5gqrfZDlBarHTymeec
+
+### Obter todas as pessoas
+GET {{URL_BASE}}/pessoa
+Authorization: {{token}}
+
+### Obter uma pessoa pelo ID
+GET {{URL_BASE}}/pessoa/adf9ffe0-f88d-46f7-ae03-3a095b796be3
+Authorization: {{token}}
+
+### Criar pessoa
+POST {{URL_BASE}}/pessoa
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "name": "James2722",
+    "password": "1234",
+    "email": "james22302322@gmail.com"
+}

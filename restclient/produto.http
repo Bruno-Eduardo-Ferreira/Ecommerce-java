@@ -1,0 +1,33 @@
+@URL_BASE = http://localhost:8080
+
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjhjOTllNTc0LTFhZjQtNDUzMi1hOTQ4LTE4Y2E0NTJhNmFlNSIsInVzZXJuYW1lIjoiamFtZXMyQGdtYWlsLmNvbSIsImlhdCI6MTY4NTY3MTkxNSwiZXhwIjoxNjg1Njc1NTE1LCJpc3MiOiJVVEZQUiJ9.a1Obk3sX6f-bsXhmE9_nJtKly5gqrfZDlBarHTymeec
+
+### Criar Produto
+POST {{URL_BASE}}/produto
+Content-Type: application/json
+Authorization: {{token}}
+
+{   
+    "name": "2",
+    "value": 2,
+    "description": "Produto test1e"
+}
+
+### Obter um produto pelo ID
+GET {{URL_BASE}}/produto/79b68efd-fafc-4adb-a32e-d86c2b138f95
+Authorization: {{token}}
+
+### Obter todos produtos
+GET {{URL_BASE}}/produto
+Authorization: {{token}}
+
+### Atualizar produto
+PUT {{URL_BASE}}/produto/79b68efd-fafc-4adb-a32e-d86c2b138f95
+Content-Type: application/json
+Authorization: {{token}}
+
+{   
+    "name": "200 mil",
+    "value": 200,
+    "description": "Produto alterado"
+}
