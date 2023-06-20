@@ -20,7 +20,7 @@ public class Produto {
     private String name;
 
     @Column(name = "value")
-    private float value;
+    private Double value;
 
     @Column(name = "description", length = 255)
     private String description;

@@ -3,6 +3,7 @@ package br.edu.utfpr.ecommerce.model;
 import java.util.List;
 import java.util.UUID;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -16,6 +17,9 @@ import lombok.Data;
 public class Carrinho {
     @Id
     private UUID id;
+
+    @Column(name = "total")
+    private Double total;
 
     // Um carrinho para muitos produtos
     @OneToMany

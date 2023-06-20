@@ -1,20 +1,19 @@
 @URL_BASE = http://localhost:8080
 
-@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjhjOTllNTc0LTFhZjQtNDUzMi1hOTQ4LTE4Y2E0NTJhNmFlNSIsInVzZXJuYW1lIjoiamFtZXMyQGdtYWlsLmNvbSIsImlhdCI6MTY4NTY3MTkxNSwiZXhwIjoxNjg1Njc1NTE1LCJpc3MiOiJVVEZQUiJ9.a1Obk3sX6f-bsXhmE9_nJtKly5gqrfZDlBarHTymeec
-
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjhjOTllNTc0LTFhZjQtNDUzMi1hOTQ4LTE4Y2E0NTJhNmFlNSIsInVzZXJuYW1lIjoiamFtZXMyQGdtYWlsLmNvbSIsImlhdCI6MTY4NzI5MzEwNSwiZXhwIjoxNjg3Mjk2NzA1LCJpc3MiOiJVVEZQUiJ9.3Ict5IbZMT_Ge1a-moN31Q2pNS3WUOHyQNorcb-5eLI
 ### Criar Produto
 POST {{URL_BASE}}/produto
 Content-Type: application/json
 Authorization: {{token}}
 
 {   
-    "name": "2",
-    "value": 2,
-    "description": "Produto test1e"
+    "name": "Produto 1",
+    "value": 99.99,
+    "description": "Produto teste"
 }
 
 ### Obter um produto pelo ID
-GET {{URL_BASE}}/produto/79b68efd-fafc-4adb-a32e-d86c2b138f95
+GET {{URL_BASE}}/produto/7cdd3777-3718-47ff-b1b9-d166b52681d8
 Authorization: {{token}}
 
 ### Obter todos produtos
@@ -22,12 +21,12 @@ GET {{URL_BASE}}/produto
 Authorization: {{token}}
 
 ### Atualizar produto
-PUT {{URL_BASE}}/produto/79b68efd-fafc-4adb-a32e-d86c2b138f95
+PUT {{URL_BASE}}/produto/2abd93f6-a24b-4821-bef2-ae5aef9cf22f
 Content-Type: application/json
 Authorization: {{token}}
 
 {   
-    "name": "200 mil",
-    "value": 200,
-    "description": "Produto alterado"
+    "name": "Produto 1 Att",
+    "value": 199.99,
+    "description": "Produto teste Att"
 }

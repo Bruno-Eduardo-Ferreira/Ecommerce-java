@@ -11,6 +11,9 @@ public class CarrinhoDTO {
     @NotBlank(message = "Obrigatório")
 
     @NotBlank(message = "Obrigatório")
+    private Double total;
+
+    @NotBlank(message = "Obrigatório")
     private List<UUID> productsIds;
 
     @NotBlank(message = "Obrigatório")

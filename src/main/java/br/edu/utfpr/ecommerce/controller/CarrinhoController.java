@@ -53,6 +53,15 @@ public class CarrinhoController {
 
         entity.setProducts(listProducts);
 
+        entity.setProducts(listProducts);
+
+        // Calcular o total
+        double total = listProducts.stream()
+                .mapToDouble(Produto::getValue)
+                .sum();
+
+        entity.setTotal(total);
+
         carrinhoRepository.save(entity);
 
         return ResponseEntity.status(201).body(entity);
@@ -87,6 +96,15 @@ public class CarrinhoController {
         var prod = produtoRepository.findAllById(carrinhoDTO.getProductsIds());
         List<Produto> listProducts = new ArrayList<Produto>();
         prod.iterator().forEachRemaining(listProducts::add);
+
+        carToUpdate.setProducts(listProducts);
+
+        // Calcular o total
+        double total = listProducts.stream()
+                .mapToDouble(Produto::getValue)
+                .sum();
+
+        carToUpdate.setTotal(total);
 
         carToUpdate.setProducts(listProducts);
 

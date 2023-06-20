@@ -45,7 +45,7 @@ public class ProdutoController {
         return produtoRepository.findById(UUID.fromString(id));
     }
 
-    // Obter todos os carrinhos da API
+    // Obter todos os produtos da API
     @GetMapping({ "", "/" })
     public Iterable<Produto> getCarrinhos() {
         return produtoRepository.findAll();

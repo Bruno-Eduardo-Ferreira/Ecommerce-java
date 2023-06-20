@@ -71,6 +71,8 @@ public class PedidoController {
         var car = carrinhoRepository.findById(pedidoDTO.getCarrinhoId());
         pedToUpdate.setCarrinho(car.get());
 
+        
+
         return ResponseEntity.ok().body(this.pedidoRepository.save(pedToUpdate));
     }
 

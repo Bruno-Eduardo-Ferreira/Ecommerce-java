@@ -12,7 +12,7 @@ public class ProdutoDTO {
     private String name;
 
     @NotBlank(message = "Obrigatório")
-    private float value;
+    private Double value;
 
     @Size(min = 10, message = "Min 10 caracteres")
     private String description;

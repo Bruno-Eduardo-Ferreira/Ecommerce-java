@@ -1,6 +1,6 @@
 @URL_BASE = http://localhost:8080
 
-@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjhjOTllNTc0LTFhZjQtNDUzMi1hOTQ4LTE4Y2E0NTJhNmFlNSIsInVzZXJuYW1lIjoiamFtZXMyQGdtYWlsLmNvbSIsImlhdCI6MTY4NTY3MTkxNSwiZXhwIjoxNjg1Njc1NTE1LCJpc3MiOiJVVEZQUiJ9.a1Obk3sX6f-bsXhmE9_nJtKly5gqrfZDlBarHTymeec
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBUEkgYXV0aGVudGljYXRpb24iLCJpZCI6IjhjOTllNTc0LTFhZjQtNDUzMi1hOTQ4LTE4Y2E0NTJhNmFlNSIsInVzZXJuYW1lIjoiamFtZXMyQGdtYWlsLmNvbSIsImlhdCI6MTY4NjczOTc0MSwiZXhwIjoxNjg2NzQzMzQxLCJpc3MiOiJVVEZQUiJ9.hyYY6rP74f6pEaksmt2DPWXaNc50d7Bp-wejIBw9WSg	
 
 ### Criar Pedido
 POST {{URL_BASE}}/pedido
@@ -9,11 +9,12 @@ Authorization: {{token}}
 
 {
 	"isopen": true,
-	"carrinhoId": "60599a6a-2b33-4189-9fce-35841b557105"
+	"carrinhoId": "e4ba2a0a-99a8-4c5b-8240-23e7b9c047ca",
+	"date": "2023-05-22"
 }
 
 ### Obter um pedido pelo ID
-GET {{URL_BASE}}/pedido/5d0e8ae2-3392-4c2f-8626-181849847124
+GET {{URL_BASE}}/pedido/3b1c896f-a33b-44a5-ad19-4845bed38118
 Authorization: {{token}}
 
 ### Obter todos pedidos
@@ -21,11 +22,12 @@ GET {{URL_BASE}}/pedido
 Authorization: {{token}}
 
 ### Atualizar Pedido
-PUT {{URL_BASE}}/pedido/5d0e8ae2-3392-4c2f-8626-181849847124
+PUT {{URL_BASE}}/pedido/9ae2aff0-7890-4413-97b9-8ed8497bc4b0
 Content-Type: application/json
 Authorization: {{token}}
 
 {
 	"isopen": true,
-	"carrinhoId": "fd7c78fb-493b-488e-9a46-b59d4e72801f"
+	"carrinhoId": "f680dc99-c3e1-4fe1-bdb0-d01e7ce82a19",
+	"date": "2023-04-22"
 }
